@@ -10,7 +10,7 @@ module.exports = {
       required: true
     },
     destination: {
-      example: '/Users/mikermcneil/tmp-contents.zip',
+      example: '/Users/mikermcneil/my-stuff',
       // TODO: default to using `inputs.source` - ".zip" and just creating the expanded results in the same dir that the archive originally lived in
       description: 'The path (relative or absolute) to a directory where contents should be extracted.',
       extendedDescription: 'If a relative path is provided, it will be resolved to an absolute path using the current working directory.',
