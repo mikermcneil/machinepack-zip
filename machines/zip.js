@@ -35,8 +35,10 @@ module.exports = {
     var fs = require('fs');
     var Archiver = require('archiver');
 
-    var sources = [path.resolve(inputs.source)];
+    var srcPath = path.resolve(inputs.source);
     var zipFileDestination = path.resolve(inputs.destination);
+    console.log('from %s to %s', srcPath, zipFileDestination);
+
     var archive = Archiver('zip');
 
     var outputStream = fs.createWriteStream(zipFileDestination);
@@ -55,7 +57,7 @@ module.exports = {
     archive.pipe(outputStream);
 
     archive.bulk([
-      { src: sources, dest: zipFileDestination }
+      { src: [ srcPath ], cwd: path.resolve(srcPath, '..'), expand: true, dest: zipFileDestination }
     ]);
 
     archive.finalize();

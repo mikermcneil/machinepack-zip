@@ -35,7 +35,6 @@ module.exports = {
     var sourceArchive = path.resolve(inputs.source);
     var destinationDir = path.resolve(inputs.destination);
 
-console.log('from %s to %s', sourceArchive, destinationDir);
     var srcStream = fs.createReadStream(sourceArchive);
     var drainStream = unzip.Extract({ path: destinationDir });
     drainStream.once('close', function (){ return exits.success(); });
