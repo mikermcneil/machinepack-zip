@@ -23,7 +23,10 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Done.'
+      description: 'Done- archive has been finalized and the output file descriptor has closed.',
+      example: {
+        bytesWritten: 3523523,
+      }
     }
   },
   fn: function(inputs, exits) {
@@ -36,11 +39,11 @@ module.exports = {
     var zipFileDestination = path.resolve(inputs.destination);
     var archive = Archiver('zip');
 
-    var outputStream = fs.createWriteStream(destination);
+    var outputStream = fs.createWriteStream(zipFileDestination);
     outputStream.once('close', function() {
-      console.log(archive.pointer() + ' total bytes');
-      console.log('Archiver has been finalized and the output file descriptor has closed.');
-      return exits.success();
+      return exits.success({
+        bytesWritten: archive.pointer()
+      });
     });
     outputStream.once('error', function (err) {
       return exits.error(err);
