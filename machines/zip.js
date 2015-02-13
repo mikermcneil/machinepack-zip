@@ -37,7 +37,7 @@ module.exports = {
 
     var srcPath = path.resolve(inputs.source);
     var zipFileDestination = path.resolve(inputs.destination);
-    console.log('from %s to %s', srcPath, zipFileDestination);
+    // console.log('from %s to %s', srcPath, zipFileDestination);
 
     var archive = Archiver('zip');
 
@@ -56,8 +56,16 @@ module.exports = {
 
     archive.pipe(outputStream);
 
+    // Get (1) srcPath's parent and (2) the relative path to our srcPath from its parent
+    var srcParent = path.resolve(srcPath, '..');
+    var srcRelative = path.relative(srcParent, srcPath);
+
+    // console.log('srcParent',srcParent);
+    // console.log('srcRelative',srcRelative);
+    // console.log('dest',zipFileDestination);
+
     archive.bulk([
-      { src: [ srcPath ], cwd: path.resolve(srcPath, '..'), expand: true, dest: zipFileDestination }
+      { src: [ srcRelative ], cwd: srcParent, expand: true }
     ]);
 
     archive.finalize();
