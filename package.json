@@ -21,11 +21,13 @@
   "machinepack": {
     "friendlyName": "Zip",
     "machineDir": "machines/",
-    "machines": [],
+    "machines": [
+      "zip-files"
+    ],
     "testsUrl": "https://travis-ci.org/"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:mikermcneil/machinepack-zip.git"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "machine": "zip-files",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
