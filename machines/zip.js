@@ -63,9 +63,10 @@ module.exports = {
     // console.log('srcParent',srcParent);
     // console.log('srcRelative',srcRelative);
     // console.log('dest',zipFileDestination);
+    // console.log('srces: ',[ srcRelative, path.join(srcRelative, '**') ]);
 
     archive.bulk([
-      { src: [ srcRelative ], cwd: srcParent, expand: true }
+      { src: [ srcRelative, path.join(srcRelative, '**') ], cwd: srcParent, expand: true }
     ]);
 
     archive.finalize();
