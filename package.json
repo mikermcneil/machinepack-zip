@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "machine": "^3.0.0",
-    "archiver": "^0.14.2"
+    "archiver": "^0.14.2",
+    "unzip": "^0.1.11"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.2"
@@ -23,7 +24,8 @@
     "friendlyName": "Zip",
     "machineDir": "machines/",
     "machines": [
-      "zip-files"
+      "unzip",
+      "zip"
     ],
     "testsUrl": "https://travis-ci.org/"
   },

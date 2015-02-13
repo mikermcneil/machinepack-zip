@@ -1,5 +1,5 @@
 module.exports = {
-  friendlyName: 'Zip files',
+  friendlyName: 'Zip',
   description: 'Zip up the specified source file or directory and write a .zip file to disk.',
   extendedDescription: '',
   inputs: {
