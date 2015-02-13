@@ -15,7 +15,8 @@
   "dependencies": {
     "machine": "^3.0.0",
     "archiver": "^0.14.2",
-    "unzip": "^0.1.11"
+    "unzip": "^0.1.11",
+    "lodash": "^3.2.0"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.2"
