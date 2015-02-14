@@ -1,7 +1,7 @@
 module.exports = {
   friendlyName: 'Zip',
-  description: 'Zip up the specified source file or directory and write a .zip file to disk.',
-  extendedDescription: '',
+  description: 'Compress the specified source files or directories into a .zip file.',
+  extendedDescription: 'If something already exists at the specified destination (where the .zip file is going to go), it will be overwritten. If any of the specified sources do not exist, they will be ignored.',
   inputs: {
     sources: {
       example: ['/Users/mikermcneil/foo/api/'],
