@@ -1,6 +1,6 @@
 {
   "name": "machinepack-zip",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Zip and unzip files or directories in Node.js.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
