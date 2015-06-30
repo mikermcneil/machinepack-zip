@@ -15,12 +15,12 @@
   "dependencies": {
     "archiver": "^0.14.2",
     "lodash": "^3.2.0",
-    "machine": "^9.0.3",
+    "machine": "^10.3.1",
     "machinepack-fs": "^2.1.0",
     "unzip": "^0.1.11"
   },
   "devDependencies": {
-    "test-machinepack-mocha": "^1.0.0"
+    "test-machinepack-mocha": "^2.1.1"
   },
   "machinepack": {
     "friendlyName": "Zip",
