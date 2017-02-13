@@ -30,7 +30,7 @@ module.exports = {
 
     var path = require('path');
     var fs = require('fs');
-    var unzip = require('unzip');
+    var unzip = require('unzip2');
     var Filesystem = require('machinepack-fs');
 
     var sourceArchive = path.resolve(inputs.source);
