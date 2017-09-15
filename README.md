@@ -11,7 +11,7 @@ Zip and unzip files or directories in Node.js.
 ## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-zip.svg)](http://badge.fury.io/js/machinepack-zip) [![Build Status](https://travis-ci.org/mikermcneil/machinepack-zip.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-zip)
 
 ```sh
-$ npm install machinepack-zip
+$ npm install machinepack-zip-2
 ```
 
 ## Usage
@@ -27,4 +27,3 @@ Learn more at <a href="http://node-machine.org/implementing/FAQ" title="Machine 
 ## License
 
 MIT &copy; 2015 contributors
-
