@@ -1,20 +1,21 @@
 {
-  "name": "machinepack-zip",
-  "version": "1.2.0",
+  "name": "machinepack-zip-2",
+  "version": "2.0.0",
   "description": "Zip and unzip files or directories in Node.js.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
   },
   "keywords": [
     "Zip",
+    "Zip-2",
     "machines",
     "machinepack"
   ],
-  "author": "",
+  "author": "@josebaseba",
   "license": "MIT",
   "dependencies": {
     "archiver": "^0.14.2",
-    "lodash": "^3.2.0",
+    "lodash.map": "^4.6.0",
     "machine": "^10.3.1",
     "machinepack-fs": "^2.1.0",
     "unzip2": "^0.2.5"
@@ -23,7 +24,7 @@
     "test-machinepack-mocha": "^2.1.1"
   },
   "machinepack": {
-    "friendlyName": "Zip",
+    "friendlyName": "Zip-2",
     "machineDir": "machines/",
     "machines": [
       "unzip",
@@ -33,6 +34,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mikermcneil/machinepack-zip.git"
+    "url": "git@github.com:josebaseba/machinepack-zip-2.git"
   }
 }

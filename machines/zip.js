@@ -33,11 +33,11 @@ module.exports = {
 
     var path = require('path');
     var fs = require('fs');
-    var _ = require('lodash');
+    var _map = require('lodash.map');
     var Archiver = require('archiver');
     var Filesystem = require('machinepack-fs');
 
-    var srcPaths = _.map(inputs.sources, function (sourcePath){
+    var srcPaths = _map(inputs.sources, function (sourcePath){
       return path.resolve(sourcePath);
     });
     var zipFileDestination = path.resolve(inputs.destination);
@@ -71,7 +71,7 @@ module.exports = {
 
         archive.pipe(outputStream);
 
-        archive.bulk(_.map(srcPaths, function convertPathIntoArchiverBulkInstr(srcPath){
+        archive.bulk(_map(srcPaths, function convertPathIntoArchiverBulkInstr(srcPath){
           // Get (1) srcPath's parent and (2) the relative path to our srcPath from its parent
           var srcParent = path.resolve(srcPath, '..');
           var srcRelative = path.relative(srcParent, srcPath);
